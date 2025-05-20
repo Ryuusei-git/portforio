@@ -1,0 +1,241 @@
+@import url(style/loading.css);
+@import url(style/swiper.css);
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: rgba(86, 94, 94, 0.195);
+    font-family: "Monomakh", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    background-color: rgb(65, 74, 208);
+    color: antiquewhite;
+    padding: 1rem;
+    width: 100%;
+    position: fixed; /* ← 追加 */
+    top: 0; /* ← 追加 */
+    left: 0; /* ← 念のため追加 */
+    z-index: 9999; /* ← 他の要素より上に表示されるように */
+}
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+header ul {
+    width: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s linear;
+    font-size: 2rem;
+}
+
+main {
+    padding-top: 100px; /* ヘッダー分の余白を追加 */
+}
+
+.wrapper1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: navy;
+}
+
+#sec01 {
+    margin-bottom: 5rem;
+}
+
+#sec01 img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+section {
+    /* border: 1px solid black; */
+    margin: 8rem 0;
+}
+
+.setumei {
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    padding: 30px;
+}
+
+.setumei2 p {
+    /* height: 100px; */
+    /* border: 1px solid red; */
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+#sec01,
+#sec02,
+#sec03 {
+    scroll-margin-top: 200px;
+}
+
+#sec01 h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+#sec03 {
+    margin-top: 5rem;
+}
+
+#sec03 h2 {
+    /* border: 1px solid gold; */
+    margin-bottom: 2rem;
+}
+
+#sec03 p {
+    font-size: 1.5rem;
+    /* border: 2px solid blue; */
+    margin-bottom: 20px;
+}
+
+#sec02 .images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+#sec02 .images img {
+    /* border: 3px solid red; */
+    width: 280px;
+    height: 200px;
+}
+
+.button button {
+    background-color: rgb(61, 83, 226);
+    color: aliceblue;
+    padding: 20px;
+    margin: 4rem 0;
+    font-size: 1.5rem;
+}
+
+.button button:hover {
+    transform: translate(5px, 10px);
+}
+
+.button {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 2rem;
+}
+
+footer {
+    background-color: aquamarine;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#sec02 .images p img:hover {
+    transform: translate(5px, 10px);
+}
+
+/* メディアクエリ*********************************************** */
+
+@media screen and (max-width: 768px) {
+    #drawerButton {
+        display: block;
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        z-index: 10000;
+    }
+
+    /* メニュートグルの基本スタイル */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        gap: 24px;
+    }
+
+    .bar {
+        height: 4px;
+        width: 100%;
+        background-color: #333;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        margin-bottom: 5px;
+    }
+
+    #drawerButton.reDesign .bar1 {
+        transform: rotate(45deg);
+        position: relative;
+        top: 9px;
+    }
+
+    #drawerButton.reDesign .bar2 {
+        opacity: 0;
+    }
+
+    #drawerButton.reDesign .bar3 {
+        transform: rotate(-45deg);
+        position: relative;
+        bottom: 9px;
+    }
+
+    header ul {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 100%;
+        top: 0;
+        background-color: #3832d5ce;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+        z-index: 1000;
+        font-size: 3rem;
+    }
+
+    header ul.open {
+        left: 0;
+    }
+}
+
+/* メディアクエリ*********************************************** */
+
+@media screen and (max-width: 600px) {
+    .setumei {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .setumei2 p {
+        text-align: center;
+    }
+}

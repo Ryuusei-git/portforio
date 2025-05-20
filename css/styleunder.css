@@ -1,0 +1,63 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body p img {
+    width: 50%;
+    height: 50%;
+}
+
+.main {
+    /* border: 2px solid red; */
+    text-align: center;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 中央揃え */
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 4rem;
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+    margin: 4rem;
+}
+
+.setu {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem; /* 下の余白を追加 */
+    width: 70%;
+    margin: 0 auto;
+}
+
+.setu p {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 2ch;
+    padding-bottom: 2ch;
+    letter-spacing: 0.5ch;
+}
+
+.button button {
+    background-color: blue;
+    color: aliceblue;
+    padding: 15px;
+    border-radius: 50%;
+    margin: 4rem 0;
+}
+
+.button {
+    text-align: center;
+}
+
+.button button:hover {
+    transform: translate(3px, 7px);
+}
