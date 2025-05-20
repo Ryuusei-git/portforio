@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>classListプロパティについて</title>
+        <link rel="stylesheet" href="css/destyle.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Monomakh&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </head>
+
+    <body>
+        <div class="loading-screen">
+            <div class="loader"></div>
+        </div>
+
+        <header>
+            <h1>PortForio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sec01">Name</a></li>
+                    <li><a href="#sec03">Profile</a></li>
+                    <li><a href="#sec02">The works</a></li>
+                </ul>
+            </nav>
+
+            <button id="drawerButton" class="menu-toggle">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </button>
+        </header>
+
+        <main>
+            <div class="wrapper1">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="images/img5.png" alt="風景1" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img2.png" alt="風景2" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img8.png" alt="風景3" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img4.png" alt="風景4" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img1.png" alt="風景5" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img3.png" alt="風景6" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/img4.png" alt="風景7" />
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+
+                <section id="sec01">
+                    <h2>Name</h2>
+                    <div class="setumei">
+                        <img src="images/myimg.png" alt="自画像" />
+                        <div class="setumei2">
+                            <p>内本　龍成</p>
+                            <p>Uchimoto Ryuusei</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sec03">
+                    <h2>Profile</h2>
+                    <p>生年月日：2000年4月21日</p>
+                    <p>出身地：兵庫県尼崎市</p>
+                    <p>趣味：野球観戦、音楽鑑賞、舞台鑑賞</p>
+                </section>
+
+                <section id="sec02">
+                    <h2>The works</h2>
+                    <div class="images">
+                        <p>
+                            <a href="img01.html"><img src="images/img1.png" alt="" /></a>
+                        </p>
+                        <p>
+                            <a href="img02.html"><img src="images/img2.png" alt="" /></a>
+                        </p>
+                        <p>
+                            <a href="img03.html"><img src="images/img3.png" alt="" /></a>
+                        </p>
+                        <p>
+                            <a href="img04.html"><img src="images/img4.png" alt="" /></a>
+                        </p>
+                        <p>
+                            <a href="img05.html"><img src="images/img5.png" alt="" /></a>
+                        </p>
+                        <p>
+                            <a href="img06.html"><img src="images/img6.png" alt="" /></a>
+                        </p>
+                        <p>
+                            <a href="img07.html"><img src="images/img7.png" alt="" /></a>
+                        </p>
+                        <p>
+                            <a href="img08.html"><img src="images/img8.png" alt="" /></a>
+                        </p>
+                        <p>
+                            <a href="img09.html"><img src="images/img9.png" alt="" /></a>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="button">
+                <button id="toTopButton">Topへ</button>
+            </div>
+        </main>
+
+        <footer>
+            <p><small>&copy;2025 Uchimoto </small></p>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
