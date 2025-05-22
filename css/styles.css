@@ -1,3 +1,21 @@
+/* ***********************************変数******************************************* */
+:root {
+    /* 色*********************************** */
+    --baseColor: #121212;
+    --fontColor: #e0e0e0;
+    --accentColor: #5f9ea0;
+    /* 下記は作るのもいいかも〜で一応用意しています */
+    /* フォントサイズ*********************************** */
+    --fontsizeLarge: 3rem;
+    --fontsizeMedium: 2rem;
+    --fontsizeSmall: 1rem;
+    /* スペースサイズ*********************************** */
+    --spaceLarge: 3rem;
+    --spaceMedium: 2rem;
+    --spaceSmall: 1rem;
+}
+/* ***********************************変数******************************************* */
+
 @import url(style/loading.css);
 @import url(style/swiper.css);
 
@@ -11,14 +29,15 @@ img {
 }
 
 body {
-    background-color: rgba(86, 94, 94, 0.195);
+    background-color: #121212;
     font-family: "Monomakh", system-ui;
     font-weight: 400;
     font-style: normal;
+    color: #e0e0e0;
 }
 
 header {
-    background-color: rgb(65, 74, 208);
+    background-color: #5f9ea0;
     color: antiquewhite;
     padding: 1rem;
     width: 100%;
@@ -54,7 +73,7 @@ main {
 
 h2 {
     font-size: 2rem;
-    color: navy;
+    color: #5f9ea0;
 }
 
 #sec01 {
@@ -132,7 +151,7 @@ section {
 }
 
 .button button {
-    background-color: rgb(61, 83, 226);
+    background-color: #5f9ea0;
     color: aliceblue;
     padding: 20px;
     margin: 4rem 0;
@@ -151,24 +170,263 @@ section {
 }
 
 footer {
-    background-color: aquamarine;
+    background-color: #5f9ea0;
     padding: 1rem;
     font-size: 1.5rem;
     text-align: center;
 }
 
-#sec02 .images p img:hover {
-    transform: translate(5px, 10px);
+#sec02 .images p {
+    overflow: hidden;
+    display: inline-block;
+    width: 280px;
+    height: 200px;
+    position: relative;
 }
+
+#sec02 .images p img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#sec02 .images p img:hover {
+    transform: scale(1.2); /* 中だけ拡大される */
+}
+
+/* ふわふわ浮かす***************************************************** */
+.floating-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 背景に表示 */
+    pointer-events: none; /* クリックを無視 */
+    overflow: hidden;
+}
+
+.float-img {
+    position: absolute;
+    width: 150px;
+    opacity: 0.2;
+    animation: floatUpDown 6s ease-in-out infinite alternate;
+}
+
+.float1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+.float2 {
+    top: 20%;
+    left: 60%;
+    animation-delay: 1s;
+}
+.float3 {
+    top: 40%;
+    left: 0;
+    animation-delay: 2s;
+}
+.float4 {
+    top: 40%;
+    left: 50%;
+    animation-delay: 3s;
+}
+.float5 {
+    top: 60%;
+    left: 20%;
+    animation-delay: 4s;
+}
+.float6 {
+    top: 60%;
+    left: 80%;
+    animation-delay: 5s;
+}
+.float7 {
+    top: 80%;
+    left: 0;
+    animation-delay: 6s;
+}
+.float8 {
+    top: 80%;
+    left: 70%;
+    animation-delay: 7s;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-30px);
+    }
+}
+/* ふわふわ浮かす***************************************************** */
+
+/* ズームイン。ぼかし***************************************************** */
+.zoom-blur {
+    opacity: 0;
+    transform: scale(0.9);
+    filter: blur(4px);
+    transition: all 3s ease;
+}
+
+.zoom-blur.show {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+/* ズームイン。ぼかし***************************************************** */
+
+/* ページ遷移のフェードアウト用 ***********************************************/
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* ページ読み込み時のフェードイン */
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* ページ遷移のフェードアウト用 ***********************************************/
+/* カウントダウン ***********************************************/
+#countdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    z-index: 10000;
+    transition: opacity 1s ease;
+}
+
+#countdown-overlay.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* カウントダウン ***********************************************/
+
+/* 星空 ***********************************************/
+#starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: transparent;
+}
+/* 星空 ***********************************************/
+
+/* ===== カスタムカーソル =====****************************** */
+#cursor,
+#cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.15s ease;
+}
+
+/* メインの小さい点（白） */
+#cursor {
+    width: 4px;
+    height: 4px;
+    background: white;
+}
+
+/* 追従する大きめの円 */
+#cursor-follower {
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+/* ホバー時に拡大 */
+.hover-effect:hover ~ #cursor-follower {
+    width: 60px;
+    height: 60px;
+}
+
+/* ===== カスタムカーソル =====****************************** */
+
+/* ===== 波紋エフェクト ====*******************************************= */
+.ripple {
+    position: fixed; /* ← 修正！ */
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+/* ===== 波紋エフェクト ====*******************************************= */
 
 /* メディアクエリ*********************************************** */
 
 @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .setumei2 p {
+        font-size: 1.5rem;
+    }
+
+    #sec03 p {
+        font-size: 1.3rem;
+    }
+
     #drawerButton {
         display: block;
         position: fixed;
-        right: 1rem;
-        top: 1rem;
+        right: 2rem;
+        top: 2rem;
         z-index: 10000;
     }
 
@@ -186,7 +444,7 @@ footer {
     .bar {
         height: 4px;
         width: 100%;
-        background-color: #333;
+        background-color: #ffffff;
         transition: transform 0.3s ease, opacity 0.3s ease;
         margin-bottom: 5px;
     }
@@ -213,13 +471,13 @@ footer {
         position: fixed;
         left: 100%;
         top: 0;
-        background-color: #3832d5ce;
+        background-color: #5f9ea0b8;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 8rem;
         z-index: 1000;
-        font-size: 3rem;
+        color: var(--fontColor);
     }
 
     header ul.open {

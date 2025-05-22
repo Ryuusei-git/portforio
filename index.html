@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>classListプロパティについて</title>
+        <title>PortFolio</title>
         <link rel="stylesheet" href="css/destyle.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/styles.css" />
@@ -15,12 +15,31 @@
     </head>
 
     <body>
+        <!-- headerのすぐ下 or body直下が自然です -->
+        <canvas id="starCanvas"></canvas>
+
+        <!-- カウントダウン用オーバーレイ -->
+        <div id="countdown-overlay">
+            <div id="countdown">3</div>
+        </div>
+
+        <div class="floating-background">
+            <img src="images/img1.jpg" class="float-img float1" alt="デザイン1" />
+            <img src="images/img2.jpg" class="float-img float2" alt="デザイン2" />
+            <img src="images/img3.jpg" class="float-img float3" alt="デザイン3" />
+            <img src="images/img4.jpg" class="float-img float4" alt="デザイン4" />
+            <img src="images/img5.jpg" class="float-img float5" alt="デザイン5" />
+            <img src="images/img6.jpg" class="float-img float6" alt="デザイン6" />
+            <img src="images/img7.jpg" class="float-img float7" alt="デザイン7" />
+            <img src="images/img8.jpg" class="float-img float8" alt="デザイン8" />
+        </div>
+
         <div class="loading-screen">
             <div class="loader"></div>
         </div>
 
         <header>
-            <h1>PortForio</h1>
+            <h1>PortForlio</h1>
             <nav>
                 <ul>
                     <li><a href="#sec01">Name</a></li>
@@ -43,25 +62,25 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <img src="images/img5.png" alt="風景1" />
+                            <img src="images/img5.jpg" alt="デザイン1" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/img2.png" alt="風景2" />
+                            <img src="images/img2.jpg" alt="デザイン2" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/img8.png" alt="風景3" />
+                            <img src="images/img8.jpg" alt="デザイン3" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/img4.png" alt="風景4" />
+                            <img src="images/img4.jpg" alt="デザイン4" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/img1.png" alt="風景5" />
+                            <img src="images/img1.jpg" alt="デザイン5" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/img3.png" alt="風景6" />
+                            <img src="images/img3.jpg" alt="デザイン6" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/img4.png" alt="風景7" />
+                            <img src="images/img4.jpg" alt="デザイン7" />
                         </div>
                     </div>
                     <!-- If we need pagination -->
@@ -75,10 +94,10 @@
                     <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
 
-                <section id="sec01">
+                <section id="sec01" class="zoom-blur">
                     <h2>Name</h2>
                     <div class="setumei">
-                        <img src="images/myimg.png" alt="自画像" />
+                        <img src="images/myimg.jpg" alt="自画像" />
                         <div class="setumei2">
                             <p>内本　龍成</p>
                             <p>Uchimoto Ryuusei</p>
@@ -86,42 +105,42 @@
                     </div>
                 </section>
 
-                <section id="sec03">
+                <section id="sec03" class="zoom-blur">
                     <h2>Profile</h2>
                     <p>生年月日：2000年4月21日</p>
                     <p>出身地：兵庫県尼崎市</p>
                     <p>趣味：野球観戦、音楽鑑賞、舞台鑑賞</p>
                 </section>
 
-                <section id="sec02">
+                <section id="sec02" class="zoom-blur">
                     <h2>The works</h2>
                     <div class="images">
                         <p>
-                            <a href="img01.html"><img src="images/img1.png" alt="" /></a>
+                            <a href="img01.html"><img src="images/img1.jpg" alt="デザイン1" /></a>
                         </p>
                         <p>
-                            <a href="img02.html"><img src="images/img2.png" alt="" /></a>
+                            <a href="img02.html"><img src="images/img2.jpg" alt="デザイン2" /></a>
                         </p>
                         <p>
-                            <a href="img03.html"><img src="images/img3.png" alt="" /></a>
+                            <a href="img03.html"><img src="images/img3.jpg" alt="デザイン3" /></a>
                         </p>
                         <p>
-                            <a href="img04.html"><img src="images/img4.png" alt="" /></a>
+                            <a href="img04.html"><img src="images/img4.jpg" alt="デザイン4" /></a>
                         </p>
                         <p>
-                            <a href="img05.html"><img src="images/img5.png" alt="" /></a>
+                            <a href="img05.html"><img src="images/img5.jpg" alt="デザイン5" /></a>
                         </p>
                         <p>
-                            <a href="img06.html"><img src="images/img6.png" alt="" /></a>
+                            <a href="img06.html"><img src="images/img6.jpg" alt="デザイン6" /></a>
                         </p>
                         <p>
-                            <a href="img07.html"><img src="images/img7.png" alt="" /></a>
+                            <a href="img07.html"><img src="images/img7.jpg" alt="デザイン7" /></a>
                         </p>
                         <p>
-                            <a href="img08.html"><img src="images/img8.png" alt="" /></a>
+                            <a href="img08.html"><img src="images/img8.jpg" alt="デザイン8" /></a>
                         </p>
                         <p>
-                            <a href="img09.html"><img src="images/img9.png" alt="" /></a>
+                            <a href="img09.html"><img src="images/img9.jpg" alt="デザイン9" /></a>
                         </p>
                     </div>
                 </section>
@@ -135,6 +154,10 @@
         <footer>
             <p><small>&copy;2025 Uchimoto </small></p>
         </footer>
+
+        <!-- マウスエフェクト用カーソル -->
+        <div id="cursor"></div>
+        <div id="cursor-follower"></div>
 
         <script src="js/script.js"></script>
     </body>
